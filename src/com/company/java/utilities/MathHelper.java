@@ -28,4 +28,10 @@ public class MathHelper {
         }
         return value;
     }
+
+
+    public enum Operation {
+        ADD, SUBTRACT;
+    }
+
 }

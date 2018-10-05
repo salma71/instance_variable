@@ -1,5 +1,5 @@
-package com.company.java.utilities;
-
-public enum Operation {
-    ADD, SUBTRACT;
-}
+//package com.company.java.utilities;
+//
+//public enum Operation {
+//    ADD, SUBTRACT;
+//}
