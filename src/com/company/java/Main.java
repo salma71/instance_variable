@@ -2,6 +2,7 @@ package com.company.java;
 
 import com.company.java.utilities.InputHelper;
 import com.company.java.utilities.MathHelper;
+import com.company.java.utilities.Operation;
 
 public class Main {
 
@@ -10,7 +11,7 @@ public class Main {
 
         try {
             while(true){
-                int input = helper.addNumber("Enter a number: ");
+                int input = helper.doMath("Enter a number: ", Operation.ADD);
                 int total = helper.getTotal();
                 String message = String.format(
                         "Entered: %d, total = %d" , input, total
