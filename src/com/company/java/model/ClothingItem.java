@@ -1,6 +1,6 @@
 package com.company.java.model;
 
-public class ClothingItem implements Product {
+public abstract class ClothingItem implements Product {
     private String type;
     private String size;
     private double price;
@@ -27,13 +27,8 @@ public class ClothingItem implements Product {
         this.size = size;
     }
 
-    public double getPrice() {
-        return price;
-    }
+    public abstract double getPrice();
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
 
     @Override
     public String toString() {

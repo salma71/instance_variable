@@ -17,4 +17,8 @@ public class Shirt extends ClothingItem {
         super("Shirt", size, price); // I removed the type arg because I know that it is already a shirt
     }
 
+    @Override
+    public double getPrice() {
+        return 22.99;
+    }
 }

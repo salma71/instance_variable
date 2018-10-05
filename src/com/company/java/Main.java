@@ -6,10 +6,10 @@ import com.company.java.model.Shirt;
 
 public class Main {
     public static void main(String[] args) {
-        ClothingItem item = new ClothingItem("shirt", "L", 19.99);
+//        ClothingItem item = new ClothingItem("shirt", "L", 19.99);
 //        System.out.println(item);
-// you cannot call the setPattern() method here before the constructor because it is not a superclass
-        displayProduct(item);
+// // you cannot call the setPattern() method here before the constructor because it is not a superclass
+//        displayProduct(item);
 
         Shirt shirt = new Shirt("M", 14.99);
         displayProduct(shirt);
