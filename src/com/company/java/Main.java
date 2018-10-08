@@ -1,35 +1,56 @@
 package com.company.java;
+////I/O classes
 
 import com.company.java.model.ClothingItem;
 import com.company.java.model.Product;
 import com.company.java.model.Shirt;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 
 public class Main {
     public static void main(String[] args) {
-        String sourceFile = "files/loremipsom.txt";
-        String targetFile =  "files/target.txt";
+     Path sourceFile = Paths.get("files", "loremipsom.txt");
+     Path targetFile = Paths.get("files", "target.txt");
 
-        try (   FileReader fileReader = new FileReader(sourceFile);
-                BufferedReader bufferedReader = new BufferedReader(fileReader);
-                FileWriter writer = new FileWriter(targetFile);
-                ){
-
-
-            while (true) {
-                String line = bufferedReader.readLine();
-                if (line == null) {
-                    break;
-                }
-                writer.write(line + "\n");
-            }
+        try {
+            Files.copy(sourceFile, targetFile, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
 }
+
+//import java.io.*;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        String sourceFile = "files/loremipsom.txt";
+//        String targetFile =  "files/target.txt";
+//
+//        try (   FileReader fileReader = new FileReader(sourceFile);
+//                BufferedReader bufferedReader = new BufferedReader(fileReader);
+//                FileWriter writer = new FileWriter(targetFile);
+//        ){
+//
+//
+//            while (true) {
+//                String line = bufferedReader.readLine();
+//                if (line == null) {
+//                    break;
+//                }
+//                writer.write(line + "\n");
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//    }
+//}
 
 //import com.company.java.model.ClothingItem;
 //        import com.company.java.model.Product;
